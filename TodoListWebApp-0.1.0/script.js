@@ -18,7 +18,7 @@ function addTodo(event) {
   const listItem = document.createElement('li');
   listItem.innerHTML = `
     <span>${task}</span>
-    <div>
+    <div class="button-container">
       <button class="complete">✔</button>
       <button class="delete">✖</button>
     </div>
