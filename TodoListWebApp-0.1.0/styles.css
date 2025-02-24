@@ -81,3 +81,12 @@ button.delete {
 button.delete:hover {
     background: #c9302c;
 }
+
+.button-container{
+    display: flex;
+}
+
+span{
+    max-width: fit-content;
+    overflow: hidden;
+}
