@@ -6,13 +6,17 @@ const todoList = document.getElementById('todo-list');
 // Event Listeners
 todoForm.addEventListener('submit', addTodo);
 todoList.addEventListener('click', handleTodoClick);
+let count = 0;
 
 // Functions
 function addTodo(event) {
   event.preventDefault();
 
+
   // Get input value
   const task = todoInput.value;
+  count = count+ 1 
+
 
   // Create a new list item
   const listItem = document.createElement('li');
@@ -23,6 +27,9 @@ function addTodo(event) {
       <button class="delete">✖</button>
     </div>
   `;
+
+  const taskNumber = document.getElementById("taches")
+  taskNumber.innerHTML=`<span>${count}</span>`
 
   // Add the new task to the list
   todoList.appendChild(listItem);
@@ -46,4 +53,3 @@ function handleTodoClick(event) {
     listItem.remove();
   }
 }
-
